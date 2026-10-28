@@ -83,6 +83,7 @@ VirtualBox was installed as the hypervisor.
 ## Step 3. Create the NAT Network
 A dedicated NAT Network was created in VirtualBox.
 Configuration: Network Name: NatNetwork, IPv4 Prefix: 10.0.0.0/24, DHCP: Enabled, IPv6: Disabled.
+
 ![Nat Network](NatNetwork.png)
 
 ## Step 4. Import Kali Linux
@@ -104,10 +105,12 @@ Example configuration:
     Subnet Mask: 255.255.255.0
     Gateway: 10.0.0.1
     DNS: 8.8.8.8
+    
 ![Kali Network Configurations](IPv4-settings.png)
 
 ## Step 6. Create a Clean VM Snapshot
 After completing the initial configuration, a VirtualBox snapshot was created named: `My fresh kali for internship`. The snapshot represents the clean baseline of the laboratory.
+
 ![Snapshot](snapshot.png)
 * * *
 
@@ -121,6 +124,7 @@ After completing the initial configuration, a VirtualBox snapshot was created na
 🔎 Test DNS resolution | `ping google.com` | Domain resolves  
 
 * * *
+
 ![Kali ip](kali-ip.png)
 ![Internet Connectivity](ping-successful.png)
 
@@ -140,6 +144,7 @@ Commands used:
     sudo nmcli connection up "Wired connection 1"
 
 After restarting the network interface, internet access and DNS resolution were fully restored.
+
 ![Trouble Shooting](network-troubleshooting.png)
 * * *
 
